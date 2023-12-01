@@ -111,26 +111,3 @@ export const communityTabs = [
     icon: <BiGitPullRequest color="#5C5C7B" size={20} />,
   },
 ];
-
-export const footerLinks = [
-  {
-    label: "Terms of Service",
-    route: "/",
-  },
-  {
-    label: "Privacy Policy",
-    route: "/",
-  },
-  {
-    label: "Cookie Policy",
-    route: "/",
-  },
-  {
-    label: "Accessbility",
-    route: "/",
-  },
-  {
-    label: "Ads info",
-    route: "/",
-  },
-];

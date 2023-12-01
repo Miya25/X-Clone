@@ -1,7 +1,6 @@
 import CreatePostButton from "@/components/Elements/CreatePostButton";
 import Bottombar from "@/components/fragments/Bottombar";
 import LeftSidebar from "@/components/fragments/LeftSidebar";
-import RightSidebar from "@/components/fragments/RightSidebar";
 import Topbar from "@/components/fragments/Topbar";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
@@ -39,7 +38,6 @@ export default async function RootLayout({
               <div className="w-full max-w-4xl">{children}</div>
             </section>
 
-            <RightSidebar />
           </main>
 
           <Bottombar />
