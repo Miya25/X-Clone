@@ -50,43 +50,43 @@ export default function TweetCard({
         isComment ? "px-0 xs:px-7" : "bg-dark-2 p-7"
       }`}
     >
-      <div className='flex items-start justify-between'>
-        <div className='flex w-full flex-1 flex-row gap-4'>
-          <div className='flex flex-col items-center'>
-            <Link href={`/profile/${author.id}`} className='relative h-11 w-11'>
+      <div className="flex items-start justify-between">
+        <div className="flex w-full flex-1 flex-row gap-4">
+          <div className="flex flex-col items-center">
+            <Link href={`/profile/${author.id}`} className="relative h-11 w-11">
               <Image
                 src={author.image}
-                alt='user_community_image'
+                alt="user_community_image"
                 fill
-                className='cursor-pointer rounded-full'
+                className="cursor-pointer rounded-full"
               />
             </Link>
 
-            <div className='thread-card_bar' />
+            <div className="thread-card_bar" />
           </div>
 
-          <div className='flex w-full flex-col'>
-            <Link href={`/profile/${author.id}`} className='w-fit'>
-              <h4 className='cursor-pointer text-base-semibold text-light-1'>
+          <div className="flex w-full flex-col">
+            <Link href={`/profile/${author.id}`} className="w-fit">
+              <h4 className="cursor-pointer text-base-semibold text-light-1">
                 {author.name}
               </h4>
             </Link>
 
-            <p className='mt-2 text-small-regular text-light-2'>{content}</p>
+            <p className="mt-2 text-small-regular text-light-2">{content}</p>
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
-              <div className='flex gap-3.5'>
-                <RiHeartLine color='white' size={24} />
+              <div className="flex gap-3.5">
+                <RiHeartLine color="white" size={24} />
                 <Link href={`/tweet/${id}`}>
-                  <RiChat1Line color='white' size={24} />
+                  <RiChat1Line color="white" size={24} />
                 </Link>
-                <RiShareForwardLine color='white' size={24} />
-                <RiShareLine color='white' size={24} />
+                <RiShareForwardLine color="white" size={24} />
+                <RiShareLine color="white" size={24} />
               </div>
 
               {isComment && comments.length > 0 && (
                 <Link href={`/tweet/${id}`}>
-                  <p className='mt-1 text-subtle-medium text-gray-1'>
+                  <p className="mt-1 text-subtle-medium text-gray-1">
                     {comments.length} repl{comments.length > 1 ? "ies" : "y"}
                   </p>
                 </Link>
@@ -105,7 +105,7 @@ export default function TweetCard({
       </div>
 
       {!isComment && comments.length > 0 && (
-        <div className='ml-1 mt-3 flex items-center gap-2'>
+        <div className="ml-1 mt-3 flex items-center gap-2">
           {comments.slice(0, 2).map((comment, index) => (
             <Image
               key={index}
@@ -118,7 +118,7 @@ export default function TweetCard({
           ))}
 
           <Link href={`/tweet/${id}`}>
-            <p className='mt-1 text-subtle-medium text-gray-1'>
+            <p className="mt-1 text-subtle-medium text-gray-1">
               {comments.length} repl{comments.length > 1 ? "ies" : "y"}
             </p>
           </Link>
@@ -128,9 +128,9 @@ export default function TweetCard({
       {!isComment && community && (
         <Link
           href={`/communities/${community.id}`}
-          className='mt-5 flex items-center'
+          className="mt-5 flex items-center"
         >
-          <p className='text-subtle-medium text-gray-1'>
+          <p className="text-subtle-medium text-gray-1">
             {formatDateString(createdAt)}
             {community && ` - ${community.name} Community`}
           </p>
@@ -140,7 +140,7 @@ export default function TweetCard({
             alt={community.name}
             width={14}
             height={14}
-            className='ml-1 rounded-full object-cover'
+            className="ml-1 rounded-full object-cover"
           />
         </Link>
       )}

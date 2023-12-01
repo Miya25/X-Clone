@@ -18,13 +18,13 @@ export default async function Home({
 
   const result = await fetchPosts(
     searchParams.page ? +searchParams.page : 1,
-    30
+    30,
   );
   return (
     <>
-      <section className='mt-[56px] md:mt-0 flex flex-col gap-10'>
+      <section className="mt-[56px] md:mt-0 flex flex-col gap-10">
         {result.posts.length === 0 ? (
-          <p className='no-result'>No tweets found</p>
+          <p className="no-result">No tweets found</p>
         ) : (
           <>
             {result.posts.map((post) => (
@@ -45,7 +45,7 @@ export default async function Home({
       </section>
 
       <Pagination
-        path='/'
+        path="/"
         pageNumber={searchParams?.page ? +searchParams.page : 1}
         isNext={result.isNext}
       />

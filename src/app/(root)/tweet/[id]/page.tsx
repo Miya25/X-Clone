@@ -25,7 +25,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   const tweet = await fetchTweetById(params.id);
 
   return (
-    <section className='relative mt-[56px] md:mt-0'>
+    <section className="relative mt-[56px] md:mt-0">
       <div>
         <TweetCard
           id={tweet._id}
@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         />
       </div>
 
-      <div className='mt-7'>
+      <div className="mt-7">
         <Reply
           tweetId={params.id}
           currentUserImg={user.imageUrl}
@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         />
       </div>
 
-      <div className='mt-10'>
+      <div className="mt-10">
         {tweet.children.map((childItem: any) => (
           <TweetCard
             key={childItem._id}

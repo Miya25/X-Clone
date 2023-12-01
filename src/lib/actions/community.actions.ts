@@ -11,7 +11,7 @@ export async function createCommunity(
   username: string,
   image: string,
   bio: string,
-  createdById: string
+  createdById: string,
 ) {
   try {
     connectToDB();
@@ -145,7 +145,7 @@ export async function fetchCommunities({
 
 export async function addMemberToCommunity(
   communityId: string,
-  memberId: string
+  memberId: string,
 ) {
   try {
     connectToDB();
@@ -181,7 +181,7 @@ export async function addMemberToCommunity(
 
 export async function removeUserFromCommunity(
   userId: string,
-  communityId: string
+  communityId: string,
 ) {
   try {
     connectToDB();
@@ -189,7 +189,7 @@ export async function removeUserFromCommunity(
     const userIdObject = await User.findOne({ id: userId }, { _id: 1 });
     const communityIdObject = await Community.findOne(
       { id: communityId },
-      { _id: 1 }
+      { _id: 1 },
     );
 
     if (!userIdObject) {
@@ -202,12 +202,12 @@ export async function removeUserFromCommunity(
 
     await Community.updateOne(
       { _id: communityIdObject._id },
-      { $pull: { members: userIdObject._id } }
+      { $pull: { members: userIdObject._id } },
     );
 
     await User.updateOne(
       { _id: userIdObject._id },
-      { $pull: { communities: communityIdObject._id } }
+      { $pull: { communities: communityIdObject._id } },
     );
 
     return { success: true };
@@ -221,14 +221,14 @@ export async function updateCommunityInfo(
   communityId: string,
   name: string,
   username: string,
-  image: string
+  image: string,
 ) {
   try {
     connectToDB();
 
     const updatedCommunity = await Community.findOneAndUpdate(
       { id: communityId },
-      { name, username, image }
+      { name, username, image },
     );
 
     if (!updatedCommunity) {

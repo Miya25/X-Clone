@@ -26,7 +26,7 @@ export default function DeleteTweet({
   return (
     <>
       <RiDeleteBin7Fill
-        color='red'
+        color="red"
         size={18}
         onClick={async () => {
           await deleteTweet(JSON.parse(tweetId), pathname);
@@ -34,7 +34,7 @@ export default function DeleteTweet({
             router.push("/");
           }
         }}
-        className='cursor-pointer'
+        className="cursor-pointer"
       />
     </>
   );

@@ -18,32 +18,32 @@ import {
 
 export const sidebarLinks = [
   {
-    icon: <RiHome7Line color='white' size={24} />,
-    iconFill: <RiHome7Fill color='white' size={24} />,
+    icon: <RiHome7Line color="white" size={24} />,
+    iconFill: <RiHome7Fill color="white" size={24} />,
     route: "/",
     label: "Home",
   },
   {
-    icon: <RiSearchLine color='white' size={24} />,
-    iconFill: <RiSearchFill color='white' size={24} />,
+    icon: <RiSearchLine color="white" size={24} />,
+    iconFill: <RiSearchFill color="white" size={24} />,
     route: "/search",
     label: "Explore",
   },
   {
-    icon: <RiInboxArchiveLine color='white' size={24} />,
-    iconFill: <RiInboxArchiveFill color='white' size={24} />,
+    icon: <RiInboxArchiveLine color="white" size={24} />,
+    iconFill: <RiInboxArchiveFill color="white" size={24} />,
     route: "/activity",
     label: "Inbox",
   },
   {
-    icon: <BiGroup color='white' size={24} />,
-    iconFill: <BiSolidGroup color='white' size={24} />,
+    icon: <BiGroup color="white" size={24} />,
+    iconFill: <BiSolidGroup color="white" size={24} />,
     route: "/communities",
     label: "Communities",
   },
   {
-    icon: <RiUserLine color='white' size={24} />,
-    iconFill: <RiUserFill color='white' size={24} />,
+    icon: <RiUserLine color="white" size={24} />,
+    iconFill: <RiUserFill color="white" size={24} />,
     route: "/profile",
     label: "Profile",
   },
@@ -51,26 +51,26 @@ export const sidebarLinks = [
 
 export const bottombarLinks = [
   {
-    icon: <RiHome7Line color='white' size={24} />,
-    iconFill: <RiHome7Fill color='white' size={24} />,
+    icon: <RiHome7Line color="white" size={24} />,
+    iconFill: <RiHome7Fill color="white" size={24} />,
     route: "/",
     label: "Home",
   },
   {
-    icon: <RiSearchLine color='white' size={24} />,
-    iconFill: <RiSearchFill color='white' size={24} />,
+    icon: <RiSearchLine color="white" size={24} />,
+    iconFill: <RiSearchFill color="white" size={24} />,
     route: "/search",
     label: "Explore",
   },
   {
-    icon: <RiInboxArchiveLine color='white' size={24} />,
-    iconFill: <RiInboxArchiveFill color='white' size={24} />,
+    icon: <RiInboxArchiveLine color="white" size={24} />,
+    iconFill: <RiInboxArchiveFill color="white" size={24} />,
     route: "/activity",
     label: "Inbox",
   },
   {
-    icon: <BiGroup color='white' size={24} />,
-    iconFill: <BiSolidGroup color='white' size={24} />,
+    icon: <BiGroup color="white" size={24} />,
+    iconFill: <BiSolidGroup color="white" size={24} />,
     route: "/communities",
     label: "Communities",
   },
@@ -80,17 +80,17 @@ export const profileTabs = [
   {
     value: "tweets",
     label: "Tweets",
-    icon: <BiMessageRoundedDetail color='#5C5C7B' size={20} />,
+    icon: <BiMessageRoundedDetail color="#5C5C7B" size={20} />,
   },
   {
     value: "replies",
     label: "Replies",
-    icon: <FaRetweet color='#5C5C7B' size={20} />,
+    icon: <FaRetweet color="#5C5C7B" size={20} />,
   },
   {
     value: "tagged",
     label: "Tagged",
-    icon: <FaHashtag color='#5C5C7B' size={16} />,
+    icon: <FaHashtag color="#5C5C7B" size={16} />,
   },
 ];
 
@@ -98,17 +98,17 @@ export const communityTabs = [
   {
     value: "tweets",
     label: "Tweets",
-    icon: <BiMessageRoundedDetail color='#5C5C7B' size={20} />,
+    icon: <BiMessageRoundedDetail color="#5C5C7B" size={20} />,
   },
   {
     value: "members",
     label: "Members",
-    icon: <BiGroup color='#5C5C7B' size={20} />,
+    icon: <BiGroup color="#5C5C7B" size={20} />,
   },
   {
     value: "requests",
     label: "Requests",
-    icon: <BiGitPullRequest color='#5C5C7B' size={20} />,
+    icon: <BiGitPullRequest color="#5C5C7B" size={20} />,
   },
 ];
 

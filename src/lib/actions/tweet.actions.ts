@@ -55,7 +55,7 @@ export async function createTweet({ text, author, communityId, path }: Params) {
 
     const communityIdObject = await Community.findOne(
       { id: communityId },
-      { _id: 1 }
+      { _id: 1 },
     );
 
     const createdTweet = await Tweet.create({
@@ -113,26 +113,26 @@ export async function deleteTweet(id: string, path: string): Promise<void> {
       [
         ...descendantTweets.map((tweet) => tweet.author?._id?.toString()),
         mainTweet.author?._id?.toString(),
-      ].filter((id) => id !== undefined)
+      ].filter((id) => id !== undefined),
     );
 
     const uniqueCommunityIds = new Set(
       [
         ...descendantTweets.map((tweet) => tweet.community?._id?.toString()),
         mainTweet.community?._id?.toString(),
-      ].filter((id) => id !== undefined)
+      ].filter((id) => id !== undefined),
     );
 
     await Tweet.deleteMany({ _id: { $in: descendantTweetIds } });
 
     await User.updateMany(
       { _id: { $in: Array.from(uniqueAuthorIds) } },
-      { $pull: { tweets: { $in: descendantTweetIds } } }
+      { $pull: { tweets: { $in: descendantTweetIds } } },
     );
 
     await Community.updateMany(
       { _id: { $in: Array.from(uniqueCommunityIds) } },
-      { $pull: { tweets: { $in: descendantTweetIds } } }
+      { $pull: { tweets: { $in: descendantTweetIds } } },
     );
 
     revalidatePath(path);
@@ -188,7 +188,7 @@ export async function addCommentToTweet(
   tweetId: string,
   commentText: string,
   userId: string,
-  path: string
+  path: string,
 ) {
   connectToDB();
 

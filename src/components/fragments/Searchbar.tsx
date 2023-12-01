@@ -27,16 +27,16 @@ export default function Searchbar({ routeType }: Props) {
   }, [search, routeType]);
 
   return (
-    <div className='searchbar items-center'>
-      <RiSearchLine color='white' size={24} />
+    <div className="searchbar items-center">
+      <RiSearchLine color="white" size={24} />
       <Input
-        id='text'
+        id="text"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder={`${
           routeType !== "/search" ? "Search communities" : "Search creators"
         }`}
-        className='no-focus searchbar_input placeholder:text-light-2'
+        className="no-focus searchbar_input placeholder:text-light-2"
       />
     </div>
   );

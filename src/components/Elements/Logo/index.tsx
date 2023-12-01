@@ -17,10 +17,10 @@ export default function Logo(props: LogoProps) {
   } = props;
 
   return (
-    <Link href='/' className={`flex items-center ${paddingX} ${marginBottom}`}>
+    <Link href="/" className={`flex items-center ${paddingX} ${marginBottom}`}>
       <Image
-        src='/assets/logo.svg'
-        alt='X App Logo'
+        src="/assets/logo.svg"
+        alt="X App Logo"
         width={width}
         height={height}
       />

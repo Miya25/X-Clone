@@ -48,7 +48,7 @@ export async function updateUser({
         image,
         onboarded: true,
       },
-      { upsert: true }
+      { upsert: true },
     );
 
     if (path === "/profile/edit") {

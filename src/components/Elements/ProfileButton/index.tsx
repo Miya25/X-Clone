@@ -9,7 +9,7 @@ export default function ProfileButton(props: ProfileButtonProps) {
   const { showName } = props;
 
   return (
-    <div className='flex flex-row-reverse'>
+    <div className="flex flex-row-reverse">
       <OrganizationSwitcher
         appearance={{
           baseTheme: dark,
@@ -18,7 +18,7 @@ export default function ProfileButton(props: ProfileButtonProps) {
 
       <div>
         <UserButton
-          afterSignOutUrl='/'
+          afterSignOutUrl="/"
           appearance={{
             baseTheme: dark,
           }}

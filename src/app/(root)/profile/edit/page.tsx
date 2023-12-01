@@ -27,10 +27,10 @@ export default async function Page() {
 
   return (
     <>
-      <h1 className='head-text mt-[56px] md:mt-0'>Edit Profile</h1>
+      <h1 className="head-text mt-[56px] md:mt-0">Edit Profile</h1>
 
-      <section className='mt-6'>
-        <AccountProfileForm user={userData} btnTitle='Continue' />
+      <section className="mt-6">
+        <AccountProfileForm user={userData} btnTitle="Continue" />
       </section>
     </>
   );

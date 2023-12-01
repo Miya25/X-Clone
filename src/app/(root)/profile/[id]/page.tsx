@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   if (!userInfo?.onboarded) redirect("/onboarding");
 
   return (
-    <section className='mt-[56px] md:mt-0'>
+    <section className="mt-[56px] md:mt-0">
       <ProfileHeader
         accountId={userInfo.id}
         authUserId={user.id}
@@ -30,16 +30,16 @@ export default async function Page({ params }: { params: { id: string } }) {
         bio={userInfo.bio}
       />
 
-      <div className='mt-5'>
-        <Tabs defaultValue='tweets' className='w-full'>
-          <TabsList className='tab'>
+      <div className="mt-5">
+        <Tabs defaultValue="tweets" className="w-full">
+          <TabsList className="tab">
             {profileTabs.map((tab) => (
-              <TabsTrigger key={tab.label} value={tab.value} className='tab'>
+              <TabsTrigger key={tab.label} value={tab.value} className="tab">
                 {tab.icon}
-                <p className='max-sm:hidden'>{tab.label}</p>
+                <p className="max-sm:hidden">{tab.label}</p>
 
                 {tab.label === "Tweets" && (
-                  <p className='ml-1 rounded-sm bg-light-4 px-2 py-1 !text-tiny-medium text-light-2'>
+                  <p className="ml-1 rounded-sm bg-light-4 px-2 py-1 !text-tiny-medium text-light-2">
                     {userInfo.tweets.length}
                   </p>
                 )}
@@ -50,12 +50,12 @@ export default async function Page({ params }: { params: { id: string } }) {
             <TabsContent
               key={`content-${tab.label}`}
               value={tab.value}
-              className='w-full text-light-1'
+              className="w-full text-light-1"
             >
               <TweetsTab
                 currentUserId={user.id}
                 accountId={userInfo.id}
-                accountType='User'
+                accountType="User"
               />
             </TabsContent>
           ))}

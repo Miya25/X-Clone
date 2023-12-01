@@ -6,19 +6,19 @@ import ProfileButton from "../Elements/ProfileButton";
 
 export default function LeftSidebar() {
   return (
-    <section className='custom-scrollbar leftsidebar'>
+    <section className="custom-scrollbar leftsidebar">
       <Logo />
-      <div className='flex w-full flex-1 flex-col gap-1 px-6 items-center lg:items-start'>
+      <div className="flex w-full flex-1 flex-col gap-1 px-6 items-center lg:items-start">
         <NavigationLinks
           links={sidebarLinks}
-          linkClassName='leftsidebar_link'
-          pClassName='text-light-1 max-lg:hidden'
+          linkClassName="leftsidebar_link"
+          pClassName="text-light-1 max-lg:hidden"
         />
-        <div className='w-fit lg:w-full'>
-          <CreatePostButton displayMd='block' />
+        <div className="w-fit lg:w-full">
+          <CreatePostButton displayMd="block" />
         </div>
       </div>
-      <div className='px-6'>
+      <div className="px-6">
         <ProfileButton showName={false} />
       </div>
     </section>
