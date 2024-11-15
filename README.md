@@ -1,3 +1,6 @@
+THIS PROJECT IS OUT OF DATE INSTEAD YOU SHOULD CHECK OUT [NETSOCIAL](https://netsocial.app)
+
+
 <div align="center">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="logo" width="50" height="auto" />
